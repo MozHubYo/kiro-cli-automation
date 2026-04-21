@@ -1,4 +1,4 @@
-# ═══════════════════════════════════════════════════════════
+﻿# ═══════════════════════════════════════════════════════════
 # unschedule-hidden.ps1 — 移除「隱藏版」排程任務
 # ═══════════════════════════════════════════════════════════
 #
@@ -24,3 +24,10 @@ if ($null -eq $task) {
 
 Unregister-ScheduledTask -TaskName $taskName -Confirm:$false
 Write-Host "✅ 已移除任務：$taskName" -ForegroundColor Green
+
+# 清理 vbs launcher
+$vbsPath = Join-Path $PSScriptRoot "_hidden_launcher.vbs"
+if (Test-Path $vbsPath) {
+    Remove-Item $vbsPath -Force
+    Write-Host "   已清理 _hidden_launcher.vbs" -ForegroundColor Gray
+}

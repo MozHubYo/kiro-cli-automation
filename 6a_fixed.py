@@ -5,7 +5,7 @@ PROMPT = "你好"
 print(f"👤 你：你好")
 
 result = subprocess.run(
-    ["kiro-cli", "chat", "--no-interactive", "--trust-tools=", PROMPT],
+    ["kiro-cli", "chat", "--no-interactive", "--trust-all-tools", PROMPT],
     capture_output=True, text=True, encoding="utf-8", errors="replace",
 )
 

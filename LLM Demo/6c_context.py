@@ -9,7 +9,7 @@ while True:
     history = "\n".join(f"{m['role']}: {m['content']}" for m in messages)
 
     result = subprocess.run(
-        ["kiro-cli", "chat", "--no-interactive", "--trust-tools=", history],
+        ["kiro-cli", "chat", "--no-interactive", "--trust-all-tools", history],
         capture_output=True, text=True, encoding="utf-8", errors="replace",
     )
     reply = re.sub(r"\x1b\[[0-9;]*m", "", result.stdout).strip().lstrip("> ").strip()

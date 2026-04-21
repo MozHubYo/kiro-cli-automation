@@ -1,4 +1,4 @@
-# 1_poetry-demo.ps1 — 透過 Kiro CLI 一次產生三首不重複的唐詩
+﻿# 1_poetry-demo.ps1 — 透過 Kiro CLI 一次產生三首不重複的唐詩
 
 $existing = Get-ChildItem -Path . -Filter "*.md" |
     Where-Object { $_.BaseName -notmatch '^(README|index|merged)' } |

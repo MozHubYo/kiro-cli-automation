@@ -16,4 +16,5 @@ venv/
 # 7 號腳本相關檔案（本地 demo，不進版控）
 7_sp_expo_demo.py
 7a_sp_expo_sheets.json
+7b_dashboard_template.html
 .kiro/
