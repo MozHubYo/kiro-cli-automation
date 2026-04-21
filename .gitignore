@@ -12,3 +12,8 @@ venv/
 # Demo 執行產物（腳本執行後自動產生的檔案，不進版控）
 *.md
 !README.md
+
+# 7 號腳本相關檔案（本地 demo，不進版控）
+7_sp_expo_demo.py
+7a_sp_expo_sheets.json
+.kiro/
